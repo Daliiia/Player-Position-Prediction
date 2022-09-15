@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+  <meta charset="UTF-8">
+  <title>position prediction</title>
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static',filename='img/icon.png') }}">
+
+</head>
+<body>
+
+<div class="h1-button">
+  <h1>Player Position Prediction </h1>
+</div>
+<div class="layer">
+
+
+  <form  action='prediction' method="post">
+    
+<div class="box">
+  
+  <div>
+    <p>Shooting <span class="tooltip"> <span class="tooltiptext">by how much he can shoot a winning goal </span></span></p>
+    <br>
+    <input id="slider" name="shooting" type="range" value="{{ request.form['shooting'] }}">
+    <label for="slider" name="shooting">50</label>
+  </div>
+  <div>
+    <p>Tackling <span class="tooltip"> <span class="tooltiptext">by how much he can tackle another player </span></span></p>
+    <br>
+    <input class="slider" name="tackling" type="range" value="{{ request.form['tackling'] }}">
+    <label for="slider" name="tackling">50</label>
+  </div>
+  <div>
+    <p>Crossing <span class="tooltip"> <span class="tooltiptext">by how much he can cross to another player</span></span></p>
+    <br>
+    <input class="slider" name="crossing" type="range" value="{{ request.form['crosiing'] }}">
+    <label for="slider" name ="crossing">50</label>
+  </div>
+  </div>
+
+  <div class="box">
+    <div>
+      <p>Intercepting <span class="tooltip"> <span class="tooltiptext">by how much he can intercept another player  </span></span></p>
+      <br>
+      <input class="slider" name="intercepting" type="range" value="{{ request.form['intercepting'] }}">
+      <label for="slider" name="intercepting">50</label>
+    </div>
+    <div>
+      <p> Aggressive <span class="tooltip"> <span class="tooltiptext">by how much he is tough, so he may take a yellow/red card</span></span></p>
+      <br>
+      <input class="slider" name="aggressive" type="range" value="{{ request.form['aggressive'] }}">
+      <label for="slider" name="aggressive">50</label>
+    </div>
+    <div>
+      <p>Acceleration <span class="tooltip"> <span class="tooltiptext">by how much do he makes mistakes like offsides and fouls  </span></span></p>
+      <br>
+      <input class="slider" name="impulse" type="range" value="{{ request.form['impulse'] }}" min="0" max="100">
+      <label for="slider" name="impulse">50</label>
+    </div>
+  </div>
+  
+  <div class="box">
+    <div>
+      <p>Assisting <span class="tooltip"> <span class="tooltiptext">by how much he can assist in the game  </span></span></p>
+      <br>
+      <input class="slider" name="assisting" type="range" value="{{ request.form['assisting'] }}">
+      <label for="slider" name="assisting">50</label>
+    </div>
+    <div>
+      <p > Stamina <span class="tooltip"> <span class="tooltiptext">by how much he can continue the whole match </span></span></p>
+      <br>
+      <input class="slider" name="power" type="range" value="{{ request.form['power'] }}">
+      <label for="slider" name="power">50</label>
+    </div>
+    <div>
+      <p > Height  </p>
+      <br>
+      <input class="slider" name="height" type="range" value="{{ request.form['height'] }}" min="140" max="200">
+      <label for="slider" name="height">170</label>
+    </div>
+    <!-- HTML !-->
+
+  </div>
+  <button class="button-55" role="button" method="get">Submit</button>
+
+  </form>
+
+
+</div>
+  
+
+
+
+<!-- partial -->
+  <script  src="{{ url_for('static',filename='script.js') }}"></script>
+
+</body>
+</layer>
+</html>
