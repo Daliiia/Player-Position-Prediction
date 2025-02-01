@@ -1,0 +1,36 @@
+html{
+margin: 0 ;
+background-image: url("../img/design.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  font-family: "Audiowide", sans-serif;
+  font-weight:bolder;
+}
+
+#display-number-of-players, #display-ratio-of-players {
+    padding: 30px;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    background-color: white;
+    border: solid grey;
+    border-radius: 5px;
+    font-size: 150%
+}
+#Numbers-Div{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+#data-dropdown{
+  width: 60%;
+  margin : left;
+}
+#skill-dropdown,H1{
+    text-align: center;
+}
+#interactive-graphs{
+    display: flex;
+    justify-content: center;
+}
