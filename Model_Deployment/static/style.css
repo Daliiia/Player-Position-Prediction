@@ -115,7 +115,7 @@ label[for='slider']{
 }
 .box div{
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 8px;
   font-size: smaller;
   color: white;
   border-radius: 13%;
@@ -140,7 +140,7 @@ p{
   background-color: #eee;
   background-image: none;
   margin-right: 70px;
-  margin-top: 30px;
+  margin-top: 10px;
   background-position: 0 90%;
   background-repeat: repeat no-repeat;
   background-size: 4px 3px;
@@ -258,6 +258,20 @@ label[for='height']{
 }
 
 .h1-button{
-  display: flex;
-  justify-content: space-evenly;
+display: flex;
+justify-content: space-evenly;
+}
+.index-button{
+    text-align:center;
+    font-size: 25px;
+    border-size: 10px;
+    background-color: white;
+    font-color:black;
+    border-radius:5px;
+    padding: 50px;
+    }
+.flex-div{
+    display: grid;
+    gridTemplateColumns: 1fr 1fr;
+    gap:10px;
 }
